@@ -1,32 +1,36 @@
-
-require.config({
-    baseUrl: '',
-    paths: {
-        jquery: 'lib/jquery',
-        underscore: 'bower_components/underscore/underscore',
-        backbone: 'bower_components/backbone/backbone',
-        "backgrid/select-all":	'bower_components/backgrid/extensions/select-all/backgrid-select-all',
+requirejs.config({
+    paths:{
+        'jquery': 'bower_components/jquery/jquery',
+        'underscore':'bower_components/underscore/underscore',
+        'backbone':'bower_components/backbone/backbone',
+        'backgrid': 'bower_components/backgrid/lib/backgrid'
     },
     map: {
         '*': {
-            'css': 'plugins/requirecss/css'
+            'css': 'bower_components/require-css/css'
         }
     },
     shim: {
-        backgrid: {
-            deps: ['jquery', 'backbone', 'underscore', 'css!vendor/backgrid/backgrid'],
-            exports: 'Backgrid'
+        'jquery': {
+            exports: 'jQuery',
         },
-        "backgrid/select-all": ['backgrid', 'css!vendor/backgrid/extensions/select-all/backgrid-select-all']
+        underscore: {
+            exports: '_'
+        },
+        backbone: {
+            deps: ["underscore", "jquery"],
+            exports: "Backbone"
+        },
+        backgrid: {
+            deps: ['jquery', 'backbone', 'underscore', 'css!bower_components/backgrid/lib/backgrid'],
+            exports: "Backgrid"
+        }
     }
-
 });
-
 require([
-
     // Load our app module and pass it to our definition function
     'app',
-], function(App){
+], function(grid){
     // The "app" dependency is passed in as "App"
-    App.initialize();
+    grid.initialize();
 });

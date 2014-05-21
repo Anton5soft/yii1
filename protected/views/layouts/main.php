@@ -56,4 +56,5 @@
 </div><!-- page -->
 
 </body>
+<script data-main="./js/main.js" src="./js/lib/require.js"></script>
 </html>
