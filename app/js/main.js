@@ -34,29 +34,29 @@ require(['app'],
             defaults: {
                 projectname: null,
                 sll: null,
-                sll: null,
                 sspn: null,
                 z: null,
                 results: null,
                 step: null
             },
-            url: function() {
-                return '/call';
-            },
-            validate: function(attr) {
-                if( !(attr.projectname && attr.sll && attr.sll) > 9 ) {
-                    return "Error Occurred";
-                }
-            },
-
-            initialize: function() {
-                this.bind("error", function (model, error) {
-                    console.log(error);
+            url: './index.php',
+            save: function(options) {
+                var model = this;
+                $.ajax({
+                    url: './index.php',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: model.toJSON(),
+                    success: function(object, status) {
+                        if (options.success) options.success(model, object);
+                    },
+                    error: function(xhr, status, error) {
+                        if (options.error) options.error(model, object.content);
+                    }
                 });
-
-            }
-
+        },
         });
+
         //View
         var callView = Backbone.View.extend({
             el: '.callForm',
@@ -80,9 +80,12 @@ require(['app'],
                     sspn: NewSspn,
                     z: NewZ,
                     results: NewResults,
-                    step: NewStep,
+                    step: NewStep
                 });
+
+                newrecord.save();
                 var json = newrecord.toJSON();
+
                 $('.test').html(JSON.stringify(json));
                 return false;
             }

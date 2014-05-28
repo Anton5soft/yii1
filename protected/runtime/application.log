@@ -1,0 +1,134 @@
+2014/05/28 14:45:16 [error] [php] Undefined index: id (/var/www/new/yii1/protected/controllers/SiteController.php:31)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 14:45:30 [error] [php] Undefined index: id (/var/www/new/yii1/protected/controllers/SiteController.php:31)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 14:45:32 [error] [php] Undefined index: id (/var/www/new/yii1/protected/controllers/SiteController.php:31)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:09:36 [error] [exception.CException] exception 'CException' with message 'Property "SiteController.Backbone_model" is not defined.' in /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/new/yii1/protected/controllers/SiteController.php(31): CComponent->__get('Backbone_model')
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): CController->run('')
+#6 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#7 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/new/yii1/app/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+HTTP_REFERER=http://localhost/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+---
+2014/05/28 16:09:48 [error] [php] Undefined index: projectname (/var/www/new/yii1/protected/controllers/SiteController.php:31)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#5 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:23:07 [error] [exception.CException] exception 'CException' with message 'Property "CHttpRequest.getPost" is not defined.' in /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CComponent.php:130
+Stack trace:
+#0 /var/www/new/yii1/protected/controllers/SiteController.php(31): CComponent->__get('getPost')
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): CController->run('')
+#6 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#7 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#8 /var/www/new/yii1/app/index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+HTTP_REFERER=http://localhost/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+---
+2014/05/28 16:23:12 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in /var/www/new/yii1/protected/controllers/SiteController.php on line 31 and defined (/var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CHttpRequest.php:197)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:23:15 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in /var/www/new/yii1/protected/controllers/SiteController.php on line 31 and defined (/var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CHttpRequest.php:197)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:23:16 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in /var/www/new/yii1/protected/controllers/SiteController.php on line 31 and defined (/var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CHttpRequest.php:197)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:24:31 [error] [php] Missing argument 1 for CHttpRequest::getPost(), called in /var/www/new/yii1/protected/controllers/SiteController.php on line 31 and defined (/var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CHttpRequest.php:197)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/?projectname=&call=&sll=&sspn=&z=&results=&step=
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
+2014/05/28 16:38:29 [error] [php] file_get_contents(): Invalid php:// URL specified (/var/www/new/yii1/protected/controllers/SiteController.php:31)
+Stack trace:
+#0 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(308): CInlineAction->runWithParams()
+#1 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(286): SiteController->runAction()
+#2 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CController.php(265): SiteController->runActionWithFilters()
+#3 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(282): SiteController->run()
+#4 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#5 /var/www/new/yii1/protected/vendor/yiisoft/yii/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#6 /var/www/new/yii1/app/index.php(13): CWebApplication->run()
+REQUEST_URI=/new/yii1/app/
+in /var/www/new/yii1/protected/controllers/SiteController.php (31)
+in /var/www/new/yii1/app/index.php (13)
