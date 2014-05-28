@@ -3,6 +3,44 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
+<div class="callForm">
+    <form class"call">
+    <div>
+        <label for="projectname" >Наименование проекта :</label>
+        <input type="text" id="projectname" name="projectname" />
+    </div>
+    <br />
+    <p>Пакет ссылок на основании конфигурации области поиска</p>
+    <div>
+    <label for="call" >Запрос :</label>
+    <input type="text" id="call" name="call" />
+    </div>
+    <div>
+    <label for="sll" >sll :</label>
+    <input type="text" id="sll" name="sll" />
+    </div>
+    <div>
+    <label for="sspn" >sspn:</label>
+    <input type="text" id="sspn" name="sspn" />
+    </div>
+    <div>
+    <label for="z" >z:</label>
+    <input type="text" id="z" name="z" />
+    </div>
+    <div>
+    <label for="results" >results:</label>
+    <input type="text" id="results" name="results" />
+    </div>
+    <div>
+    <label for="step" >шаг:</label>
+    <input type="text" id="step" name="step" />
+    </div>
+    <input type="submit" value="submit" class="submit" />
+    </form>
+
+    <div class="test"></div>
+</div>
+
 <div id="grid"></div>
 <h1>Welcome to <i><?php echo CHtml::encode(Yii::app()->name); ?></i></h1>
 
