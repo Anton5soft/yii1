@@ -27,10 +27,17 @@ class SiteController extends Controller
 	 */
 	public function actionIndex()
 	{
-
-        $post_data = file_get_contents("php://input");
-        var_dump($post_data);
-
+        $requestBody = Yii::app()->request->getRawBody();
+        $json_a = json_decode($requestBody, true);
+        $model = new Inputs;
+        $model->projectname = $json_a['projectname'];
+        $model->call = $json_a['call'];
+        $model->sll = $json_a['sll'];
+        $model->sspn = $json_a['sspn'];
+        $model->z = $json_a['z'];
+        $model->results = $json_a['results'];
+        $model->step = $json_a['step'];
+        $model->save();
         // renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
 		$this->render('index');
