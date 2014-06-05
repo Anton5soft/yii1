@@ -32,11 +32,14 @@ class SiteController extends Controller
         $model = new Inputs;
         $model->projectname = $json_a['projectname'];
         $model->call = $json_a['call'];
-        $model->sll = $json_a['sll'];
-        $model->sspn = $json_a['sspn'];
+        $model->sll = $json_a['dol'];
+        $model->sspn = $json_a['shir'];
         $model->z = $json_a['z'];
         $model->results = $json_a['results'];
-        $model->step = $json_a['step'];
+        $model->step = $json_a['catcon'];
+        $model->step = $json_a['catost'];
+        $model->step = $json_a['newstart'];
+        $model->step = $json_a['ost'];
         $model->save();
         // renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'

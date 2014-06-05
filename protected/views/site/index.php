@@ -3,6 +3,7 @@
 
 $this->pageTitle=Yii::app()->name;
 ?>
+
 <div class="callForm">
     <form class"call">
     <div>
@@ -12,32 +13,69 @@ $this->pageTitle=Yii::app()->name;
     <br />
     <p>Пакет ссылок на основании конфигурации области поиска</p>
     <div>
-    <label for="call" >Запрос :</label>
+    <label for="call" >Входящая ссылка :</label>
     <input type="text" id="call" name="call" />
     </div>
     <div>
-    <label for="sll" >sll :</label>
-    <input type="text" id="sll" name="sll" />
+    <label for="dol" >протяженость по долготе :</label>
+    <input type="text" id="dol" name="dol" />
     </div>
     <div>
-    <label for="sspn" >sspn:</label>
-    <input type="text" id="sspn" name="sspn" />
+    <label for="shir" >Протяженность по ширене:</label>
+    <input type="text" id="shir" name="shir" />
     </div>
     <div>
-    <label for="z" >z:</label>
-    <input type="text" id="z" name="z" />
+    <label for="z" >Коффициент увелечения z:</label>
+        <input type="text" id="z" value ="1" />
+        <div class="plusz" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
+        <div class="minusz" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
     </div>
     <div>
-    <label for="results" >results:</label>
+    <label for="results" >Количество результатов:</label>
     <input type="text" id="results" name="results" />
     </div>
     <div>
-    <label for="step" >шаг:</label>
-    <input type="text" id="step" name="step" />
-    </div>
-    <input type="submit" value="submit" class="submit" />
-    </form>
+    <label for="catcon" >Подключенный каталог:</label>
+        <select name="Подключенный каталог:">
+            <option value="1" id="catcon" name="catcon">men</option>
+            <option value="2" id="catcon" name="catcon" selected="selected">women</option>
+        </select>
 
+    <label for="catost" >Каталог отзывов:</label>
+    <select name="Каталог отзывов:">
+    <option value="1" id="catost" name="catost">men</option>
+    <option value="2" id="catost" name="catost" selected="selected">women</option>
+    </select>
+    </div>
+    <div>
+    <label for="newstart" >Повторный запуск через:</label>
+        <input type="text" id="time" value ="1" />
+        <div class="plus" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
+        <div class="minus" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
+        <select name="mounse" size="1" id="newstart">
+            <option value="Январь">Январь</option>
+            <option value="Февраль">Февраль</option>
+            <option value="Март">Март</option>
+             <option value="Апрель">Апрель</option>
+            <option value="Май">Май</option>
+             <option value="Июнь">Июнь</option>
+             <option value="Июль">Июль</option>
+             <option value="Август">Август</option>
+            <option value="Сентябрь">Сентябрь</option>
+             <option value="Октябрь">Октябрь</option>
+             <option value="Ноябрь">Ноябрь</option>
+             <option value="Декабрь">Декабрь</option>
+             </select>
+
+        <label for="ost" >Время запуска:</label>
+        <input type="text" id="ost" value ="0" />
+        <div class="pluzost" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
+        <div class="minusost" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
+    </div>
+    <div>
+    <input type="submit" value="submit" class="submit" />
+</div>
+    </form>
     <div class="test"></div>
 </div>
 

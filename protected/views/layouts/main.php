@@ -57,4 +57,49 @@
 
 </body>
 <script data-main="./js/main.js" src="./js/lib/require.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"  type="text/javascript"></script>
+<script>
+    $(document).ready(function(){
+        var inputz = $('#z'); // наш инпут
+        var a; // тут будел лежать текущее значение
+        $('.plusz').click(function(){ // по клику на плюс
+            a = inputz.val();  // получить текущее значение
+            a++; // увеличить на 1
+            inputz.attr('value',a); // вернуть инпуту
+        });
+
+        $('.minusz').click(function(){ // по клику на минус
+            a = inputz.val();  // получить текущее значение
+            a = (a<1)?0:a-1;
+            inputz.attr('value',a); // вернуть инпуту
+        });
+        var input = $('#time'); // наш инпут
+        var b; // тут будел лежать текущее значение
+        $('.plus').click(function(){ // по клику на плюс
+            b = input.val();  // получить текущее значение
+            b++; // увеличить на 1
+            input.attr('value',b); // вернуть инпуту
+        });
+
+        $('.minus').click(function(){ // по клику на минус
+            b = input.val();  // получить текущее значение
+            b = (b<1)?0:b-1;
+            input.attr('value',b); // вернуть инпуту
+        });
+        var inputost = $('#ost'); // наш инпут
+        var c; // тут будел лежать текущее значение
+        $('.pluzost').click(function(){ // по клику на плюс
+            c = inputost.val();  // получить текущее значение
+            c++; // увеличить на 1
+            inputost.attr('value',c); // вернуть инпуту
+        });
+
+        $('.minusost').click(function(){ // по клику на минус
+            c = inputost.val();  // получить текущее значение
+            c = (c<1)?0:c-1;
+            inputost.attr('value',c); // вернуть инпуту
+        });
+
+    });
+</script>
 </html>
