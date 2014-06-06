@@ -8,31 +8,15 @@
         // See class documentation of CActiveForm for details on this.
         'enableAjaxValidation'=>false,
     )); ?>
-
-    <p class="note">Fields with <span class="required">*</span> are required.</p>
-
-    <?php echo $form->errorSummary($model); ?>
-
     <div class="row">
-        <?php echo $form->labelEx($model,'new'); ?>
-        <?php echo $form->textField($model,'new',array('size'=>60,'maxlength'=>255)); ?>
-        <?php echo $form->error($model,'new'); ?>
+        <?php echo $form->labelEx($model,'rubric'); ?>
+        <?php echo $form->checkBoxList($model, 'rubric', array(
+            'new'=>'Зима',
+            'test'=>'Весна',
+            'new'=>'Зима',
+            'test'=>'Весна',
+            'new1'=>'Зимаa',
+            'test2'=>'Веснаa',
+        )); ?>
     </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model,'back'); ?>
-        <?php echo $form->textField($model,'back',array('size'=>60,'maxlength'=>255)); ?>
-        <?php echo $form->error($model,'back'); ?>
-    </div>
-
-    <div class="row">
-        <?php echo $form->labelEx($model,'create'); ?>
-        <?php echo $form->textField($model,'create',array('size'=>60,'maxlength'=>255)); ?>
-        <?php echo $form->error($model,'create'); ?>
-    </div>
-
-    <div class="row buttons">
-        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-    </div>
-
 <?php $this->endWidget(); ?>

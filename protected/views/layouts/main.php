@@ -90,13 +90,13 @@
         var c; // тут будел лежать текущее значение
         $('.pluzost').click(function(){ // по клику на плюс
             c = inputost.val();  // получить текущее значение
-            c++; // увеличить на 1
+            c=parseFloat(c) +  parseFloat(0.1); // увеличить на 1
             inputost.attr('value',c); // вернуть инпуту
         });
 
         $('.minusost').click(function(){ // по клику на минус
             c = inputost.val();  // получить текущее значение
-            c = (c<1)?0:c-1;
+            c = (c<1)?0:c-0.1;
             inputost.attr('value',c); // вернуть инпуту
         });
 

@@ -43,14 +43,9 @@ class SiteController extends Controller
         $model->catost = $json_a['catost'];
         $model->newstart = $json_a['newstart'];
         $model->ost = $json_a['ost'];
-        $model->save();
+        $model->attributes=$_POST;
         var_dump($model->attributes);
-        if(isset($_POST['Rubric']))
-        {
-            $model->attributes=$_POST['Rubric'];
-            if($model->save())
-                var_dump($_POST['Rubric']);
-        }
+        $model->save();
 		$this->render('index',array('model'=>$model));
 
 	}

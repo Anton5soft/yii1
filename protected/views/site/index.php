@@ -72,7 +72,7 @@ $this->pageTitle=Yii::app()->name;
              </select>
 
         <label for="ost" >Время запуска:</label>
-        <input type="text" id="ost" value ="" />
+        <input type="text" id="ost" value ="03.00" />
         <div class="pluzost" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
         <div class="minusost" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
     </div>

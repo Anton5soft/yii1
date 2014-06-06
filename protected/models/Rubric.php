@@ -7,7 +7,6 @@
  * @property integer $id
  * @property string $new
  * @property string $back
- * @property string $create
  */
 class Rubric extends CActiveRecord
 {
@@ -23,16 +22,16 @@ class Rubric extends CActiveRecord
 	 * @return array validation rules for model attributes.
 	 */
 
-
 	/**
 	 * @return array relational rules.
 	 */
-    public function relations()
-    {
-        return array(
-            'Inputs'=>array(self::HAS_MANY, 'Inputs ', 'id')
-        );
-    }
+	public function relations()
+	{
+		// NOTE: you may need to adjust the relation name and the related
+		// class name for the relations automatically generated below.
+		return array(
+		);
+	}
 
 	/**
 	 * @return array customized attribute labels (name=>label)
@@ -43,7 +42,6 @@ class Rubric extends CActiveRecord
 			'id' => 'ID',
 			'new' => 'New',
 			'back' => 'Back',
-			'create' => 'Create',
 		);
 	}
 
@@ -68,7 +66,6 @@ class Rubric extends CActiveRecord
 		$criteria->compare('id',$this->id);
 		$criteria->compare('new',$this->new,true);
 		$criteria->compare('back',$this->back,true);
-		$criteria->compare('create',$this->create,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
