@@ -8,27 +8,57 @@ var columns = [{
         orderSeparator: ''
     })
 }, {
-    name: "name",
-    label: "Name",
+    name: "projectname",
+    label: "Наименнование проэкта",
     // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
     cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
 }, {
-    name: "pop",
-    label: "Population",
-    cell: "integer" // An integer cell is a number cell that displays humanized integers
+    name: "call",
+    label: "Входящая ссылка",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+},{
+    name: "dol",
+    label: "Протяженость по долготе",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+},{
+    name: "shir",
+    label: "Протяженность по ширене",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+},{
+    name: "z",
+    label: "Коэффицеент увелечения z",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+},{
+    name: "results",
+    label: "Результаты",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
 }, {
-    name: "percentage",
-    label: "% of World Population",
-    cell: "number" // A cell type for floating point value, defaults to have a precision 2 decimal numbers
+    name: "catcon",
+    label: "Подключенный каталог",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
 }, {
-    name: "date",
-    label: "Date",
-    cell: "date"
+        name: "catost",
+        label: "Каталог отзывов",
+        // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+        cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+    }, {
+    name: "newstart",
+    label: "Повторный запуск через",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
 }, {
-    name: "url",
-    label: "URL",
-    cell: "uri" // Renders the value in an HTML anchor element
-}];
+    name: "ost",
+    label: "Время запуска",
+    // The cell type can be a reference of a Backgrid.Cell subclass, any Backgrid.Cell subclass instances like *id* above, or a string
+    cell: "string" // This is converted to "StringCell" and a corresponding class in the Backgrid package namespace is looked up
+}
+];
     return columns;
 
 });

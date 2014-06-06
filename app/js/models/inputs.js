@@ -5,11 +5,16 @@ define([
     var CallForm = Backbone.Model.extend({
         defaults: {
             projectname: null,
-            sll: null,
-            sspn: null,
+            call: null,
+            dol: null,
+            shir: null,
             z: null,
             results: null,
-            step: null
+            catcon: null,
+            catost: null,
+            newstart: null,
+            Newost: null,
+            Newrubric: null
         },
         url: './index.php/new'
 

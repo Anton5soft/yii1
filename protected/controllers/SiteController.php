@@ -21,32 +21,52 @@ class SiteController extends Controller
 		);
 	}
 
+
 	/**
 	 * This is the default 'index' action that is invoked
 	 * when an action is not explicitly requested by users.
 	 */
+
 	public function actionIndex()
 	{
+
         $requestBody = Yii::app()->request->getRawBody();
         $json_a = json_decode($requestBody, true);
         $model = new Inputs;
         $model->projectname = $json_a['projectname'];
         $model->call = $json_a['call'];
-        $model->sll = $json_a['dol'];
-        $model->sspn = $json_a['shir'];
+        $model->dol = $json_a['dol'];
+        $model->shir = $json_a['shir'];
         $model->z = $json_a['z'];
         $model->results = $json_a['results'];
-        $model->step = $json_a['catcon'];
-        $model->step = $json_a['catost'];
-        $model->step = $json_a['newstart'];
-        $model->step = $json_a['ost'];
+        $model->catcon = $json_a['catcon'];
+        $model->catost = $json_a['catost'];
+        $model->newstart = $json_a['newstart'];
+        $model->ost = $json_a['ost'];
         $model->save();
-        // renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+        var_dump($model->attributes);
+        if(isset($_POST['Rubric']))
+        {
+            $model->attributes=$_POST['Rubric'];
+            if($model->save())
+                var_dump($_POST['Rubric']);
+        }
+		$this->render('index',array('model'=>$model));
+
 	}
 
-	/**
+
+    public function actionSendData()
+    {
+        $db = Inputs::model()->findAll();
+        foreach ($db as $model) {
+            $attributes[] = $model->getAttributes();
+        }
+        $all = json_encode($attributes, JSON_NUMERIC_CHECK);
+        echo $all;
+    }
+
+    /**
 	 * This is the action to handle external exceptions.
 	 */
 	public function actionError()

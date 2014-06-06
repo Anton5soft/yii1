@@ -11,6 +11,10 @@ $this->pageTitle=Yii::app()->name;
         <input type="text" id="projectname" name="projectname" />
     </div>
     <br />
+    <p>Rubric</p>
+    <?php $this->renderPartial('_form', array('model'=>$model)); ?>
+
+        <br />
     <p>Пакет ссылок на основании конфигурации области поиска</p>
     <div>
     <label for="call" >Входящая ссылка :</label>
@@ -26,7 +30,7 @@ $this->pageTitle=Yii::app()->name;
     </div>
     <div>
     <label for="z" >Коффициент увелечения z:</label>
-        <input type="text" id="z" value ="1" />
+        <input type="text" id="z" value ="" />
         <div class="plusz" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
         <div class="minusz" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
     </div>
@@ -37,43 +41,43 @@ $this->pageTitle=Yii::app()->name;
     <div>
     <label for="catcon" >Подключенный каталог:</label>
         <select name="Подключенный каталог:">
-            <option value="1" id="catcon" name="catcon">men</option>
-            <option value="2" id="catcon" name="catcon" selected="selected">women</option>
+            <option value="man" id="catcon" name="catcon">men</option>
+            <option value="women" id="catcon" name="catcon" selected="selected">women</option>
         </select>
 
     <label for="catost" >Каталог отзывов:</label>
     <select name="Каталог отзывов:">
-    <option value="1" id="catost" name="catost">men</option>
-    <option value="2" id="catost" name="catost" selected="selected">women</option>
+    <option value="man" id="catost" name="catost">men</option>
+    <option value="women" id="catost" name="catost" selected="selected">women</option>
     </select>
     </div>
     <div>
     <label for="newstart" >Повторный запуск через:</label>
-        <input type="text" id="time" value ="1" />
+        <input type="text" id="time" value ="" />
         <div class="plus" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
         <div class="minus" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
-        <select name="mounse" size="1" id="newstart">
-            <option value="Январь">Январь</option>
-            <option value="Февраль">Февраль</option>
-            <option value="Март">Март</option>
-             <option value="Апрель">Апрель</option>
-            <option value="Май">Май</option>
-             <option value="Июнь">Июнь</option>
-             <option value="Июль">Июль</option>
-             <option value="Август">Август</option>
-            <option value="Сентябрь">Сентябрь</option>
-             <option value="Октябрь">Октябрь</option>
-             <option value="Ноябрь">Ноябрь</option>
-             <option value="Декабрь">Декабрь</option>
+        <select name="newstart" size="1" id="newstart">
+            <option value="01">Январь</option>
+            <option value="02">Февраль</option>
+            <option value="03">Март</option>
+             <option value="04">Апрель</option>
+            <option value="05">Май</option>
+             <option value="06">Июнь</option>
+             <option value="07">Июль</option>
+             <option value="08">Август</option>
+            <option value="09">Сентябрь</option>
+             <option value="10">Октябрь</option>
+             <option value="11">Ноябрь</option>
+             <option value="12">Декабрь</option>
              </select>
 
         <label for="ost" >Время запуска:</label>
-        <input type="text" id="ost" value ="0" />
+        <input type="text" id="ost" value ="" />
         <div class="pluzost" style=" display: inline-block; height: 20px; width: 20px; background-color: red;">+</div>
         <div class="minusost" style="display: inline-block; height: 20px; width: 20px; background-color: green; margin-right: 10px;">-</div>
     </div>
     <div>
-    <input type="submit" value="submit" class="submit" />
+    <input type="submit" value="Сохранить" class="submit"/>
 </div>
     </form>
     <div class="test"></div>

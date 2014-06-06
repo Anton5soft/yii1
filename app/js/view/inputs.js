@@ -13,20 +13,28 @@ define([
             //for each inputs function value
             var NewProjectname = $('#projectname').val();
             var NewCall = $('#call').val();
-            var NewSll = $('#sll').val();
-            var NewSspn = $('#sspn').val();
+            var Newdol = $('#dol').val();
+            var Newshir = $('#shir').val();
             var NewZ = $('#z').val();
             var NewResults = $('#results').val();
-            var NewStep = $('#step').val();
+            var Newcatcon = $('#catcon').val();
+            var Newcatost = $('#catost').val();
+            var Newnewstart = $('#newstart').val();
+            var Newnewstarttime = $('#time').val();
+            var Newost = $('#ost').val();
+            var Newrubric = $('#Inputs_rubric').val();
             //new model parent CallForm with value's from inputs
             var newrecord = new CallForm({
                 projectname: NewProjectname,
                 call: NewCall,
-                sll: NewSll,
-                sspn: NewSspn,
+                dol: Newdol,
+                shir: Newshir,
                 z: NewZ,
                 results: NewResults,
-                step: NewStep
+                catcon: Newcatcon,
+                catost: Newcatost,
+                newstart: '2014-' + Newnewstarttime + '-' + Newnewstart,
+                ost: Newost
             });
             newrecord.save();
             var json = newrecord.toJSON();

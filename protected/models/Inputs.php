@@ -6,12 +6,13 @@
  * The followings are the available columns in table 'inputs':
  * @property integer $id
  * @property string $projectname
- * @property integer $call
- * @property string $sll
- * @property string $sspn
+ * @property string $call
+ * @property string $dol
+ * @property string $shir
  * @property string $z
- * @property string $results
- * @property string $step
+ * @property string $result
+ * @property string $catcon
+ * @property string $catost
  */
 class Inputs extends CActiveRecord
 {
@@ -27,18 +28,21 @@ class Inputs extends CActiveRecord
 	 * @return array validation rules for model attributes.
 	 */
 
+
 	/**
 	 * @return array relational rules.
 	 */
-	public function relations()
-	{
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array(
-		);
-	}
+    public function relations()
+    {
+        // NOTE: you may need to adjust the relation name and the related
+        // class name for the relations automatically generated below.
+        return array(
+            'Rubric'=>array(self::BELONGS_TO, 'Rubric ', 'id')
+        );
+    }
 
-	/**
+
+    /**
 	 * @return array customized attribute labels (name=>label)
 	 */
 	public function attributeLabels()
@@ -47,11 +51,15 @@ class Inputs extends CActiveRecord
 			'id' => 'ID',
 			'projectname' => 'projectname',
 			'call' => 'call',
-			'sll' => 'sll',
-			'sspn' => 'sspn',
+			'dol' => 'dol',
+			'shir' => 'shir',
 			'z' => 'z',
 			'results' => 'results',
-			'step' => 'step',
+			'catcon' => 'catcon',
+			'catost' => 'catost',
+            'newstart' => 'newstart',
+            'ost' => 'ost',
+            'rubric' => 'rubric',
 		);
 	}
 
@@ -75,12 +83,16 @@ class Inputs extends CActiveRecord
 
 		$criteria->compare('id',$this->id);
 		$criteria->compare('projectname',$this->projectname,true);
-		$criteria->compare('call',$this->call);
-		$criteria->compare('sll',$this->sll,true);
-		$criteria->compare('sspn',$this->sspn,true);
+		$criteria->compare('call',$this->call,true);
+		$criteria->compare('dol',$this->dol,true);
+		$criteria->compare('shir',$this->shir,true);
 		$criteria->compare('z',$this->z,true);
-		$criteria->compare('results',$this->results,true);
-		$criteria->compare('step',$this->step,true);
+		$criteria->compare('results',$this->result,true);
+		$criteria->compare('catcon',$this->catcon,true);
+		$criteria->compare('catost',$this->catost,true);
+        $criteria->compare('newstart',$this->newstart,true);
+        $criteria->compare('ost',$this->ost,true);
+        $criteria->compare('rubric',$this->rubric,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
